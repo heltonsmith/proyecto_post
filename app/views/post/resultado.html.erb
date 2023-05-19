@@ -1,0 +1,9 @@
+<h1>Mensaje de registro de POST</h1>
+<h2>REGISTRADO OK</h2>
+
+Último post (id): <%= Post.last.id %> <br >
+Último post (author): <%= Post.last.author %> <br >
+Último post (content): <%= Post.last.content %>
+
+<br ><br >
+<%= link_to "Volver a crear post", post_index_path %>

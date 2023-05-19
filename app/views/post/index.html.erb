@@ -1,0 +1,22 @@
+<h1>Formulario de registro de POST</h1>
+
+<%= form_with url: crearpost_path, method: :post, model: @Post do |f| %>
+    
+    <%= f.label :author, "Autor:" %><br >
+    <%= f.text_field :author, name: "post[author]" %> <br >
+
+    <%= f.label :date, "Date:" %><br >
+    <%= f.text_field :date, name: "post[date]" %> <br >
+
+    <%= f.label :content, "Content:" %><br >
+    <%= f.text_field :content, name: "post[content]" %> <br >
+
+    <%= f.label :image, "Images:" %><br >
+    <%= f.text_field :image, name: "post[image]" %> <br ><br >
+
+    <%= f.submit %>
+
+<% end %>
+
+<br ><br >
+<%= link_to "Ver todos los post", post_ver_path %>

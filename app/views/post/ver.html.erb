@@ -1,0 +1,12 @@
+<h1>Ver todos los Posts registrados</h1>
+
+<% Post.all.each do |i| %>
+    post (id): <%= i.id %> <br >
+    post (author): <%= i.author %> <br >
+    post (content): <%= i.content %> <br >
+    <%= image_tag i.image, size: '300x300' %>
+    <hr >
+<% end %>
+
+<br ><br >
+<%= link_to "Volver a crear post", post_index_path %>
